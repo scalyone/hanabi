@@ -1,0 +1,74 @@
+[h1] Hanabi (Scripted) [/h1]
+
+[h2] Features:[/h2]
+
+[list]
+  [*] Scripted setup 
+  [*] Scripted play/discard hotkeys and areas
+  [*] Scripted hints appear on hidden player cards
+  [*] Cards stay hidden until played or discarded 
+  [*] Turn order represented/manipulated with an interactive turn token
+[/list]
+
+[h2] Rules [/h2]
+[url=www.ultraboardgames.com/hanabi/game-rules.php] UltraBoardGames [/url] does a good job explaining the rules of Hanabi. This version allows for a 6-player variant (3 cards each) and some fine-grained control over the rule-set.
+
+[list]
+  [*][b]Include rainbow cards:[/b] When you deal a new game, this shuffles rainbow cards into the deck and creates placeholders for them on the board.
+  [*][b]Rainbow cards are wild:[/b] When you play a rainbow card, you will be given the option to play it as part of any firework. For example, if you play a rainbow two and both the yellow and blue twos are playable, you will be given the choice to play a rainbow in either position.
+  [list][*][b]Maximum one wild card per firework:[/b] if (for example) the blue firework has a rainbow 3, then the 4 and 5 must be blue and cannot be rainbow[/list]
+  [*][b]Create a firework out of rainbow cards:[/b] Instead of 5 fireworks, there are now 6. Rainbow cards form the 6th firework.
+  [*][b]Rainbow cards are every color for hints:[/b] for example, telling a player about their blue cards puts a blue marker on all of their blue [b]and[/b] all of their rainbow cards.
+  [*][b]Rainbow is a colour (Use rainbow as a hint):[/b] players are given the option of telling another player about all the rainbows in their hand (without this the only way to know which cards in your hands are rainbow is through inference)
+[/list]
+
+[b]An Aside:[/b] Some rules allow players to give hints such as "You have no fives in your hand." Others forbid this. The UI and scripts here make no allowance for such rules, but this doesn't stop players from using them (or any other house rules for that matter).
+
+[h2] About this Mod [/h2]
+
+[h3] The User Interface (UI) [/h3]
+
+One of the main problems with playing Hanabi on Tabletop Simulator is that it’s not easy to point to a card in a player’s hand in a way that’s easy to see from all the different player’s points of view. This mod comes with a user interface that allows players to customise a set of rules as well as give hints that will automatically appear on the backs of players’ cards.
+
+[b]A useful tip:[/b] Other players get a minimal reminder of what a player has been told. This reminder will show at most one color (per card). To see more, players can hold [b]|alt+shift|[/b] when hovering over a card to see what hints another player has been given. Alternatively, players can highlight another player’s hand entirely and press [b]|f|[/b]
+
+[h3] Using the UI [/h3]
+
+The UI exists primarily on the right side of your screen. If it’s your turn and there are hint tokens face-up, it will display the option to give information to a player. To do so, first select the name of the player you want to give information to. 
+
+This should display two rows of buttons:
+[list]
+  [*] The first row will display a button for each colour-related hint you can legally give to the selected player. 
+  [*] The second row will display a button for each number-related hint you can legally give to the selected player.
+[/list]
+Click a button to talk about the displayed hint to the selected player.
+
+[h3] The Turn Token [/h3]
+
+The script learns whose turn it is by finding the turn token. Often the script will advance the turn token on your behalf. At any time you can manually pick up the turn token and place it infront of a player, this is useful in situations where you have house rules that change turns.
+
+The turn token starts on the square hanabi mat (here called the token mat) alongside the hint tokens, rockets (fuse tokens), and the deck of Hanabi cards. While placed here, you can change the rules that the script will follow. At any time, you can grab the turn token and move it back to the token mat. While not suggested, rules are hot-swappable meaning you can change them mid-game.
+
+[b]A useful tip:[/b] If ever the user interface seems stale (For example, a player is not given the option to talk even though a talk token is available), you can grab the turn-token and drop it again in front of the same player (or any player) and the script will re-compute the UI.
+
+[h3]Playing or Discarding a Card[/h3]
+
+Cards played or discarded on the table directly are revealed, but no further action is taken by the script. You can flip hint tokens and remove fuse tokens manually (You may need to unlock them first). You can start the next player’s turn by moving the turn token manually as well. 
+
+Cards placed in the circular regions labelled “Play” and “Discard” will be played automatically by the script. This will manage fuse and hint tokens according to the set rules. When a rainbow card is played, the player whose turn it is may (if appropriate) be asked to choose where the card is played.
+
+Under [code]Option > Game Keys[/code] players may set hotkeys to automatically play/discard cards. This moves whichever card is currently under the player’s cursor, to the scripted play/discard area.
+
+[b]A useful tip:[/b] Common hotkey settings are
+[list]
+  [*] comma [b]|,|[/b] for play and period [b]|.|[/b] for discard
+  [*] any of the numpad number keys (They're not otherwise used in this mod or by Tabletop Simulator)
+[/list]
+
+[h3] Chat Settings [/h3]
+
+The chat keeps a history of game events as they happen. This is helpful if playing without voice-chat or as a quick reminder. Many players find it useful to open the chat settings (via the gear icon at the top left of the chat box) and disable 'Auto Hide Chat'.
+
+[hr][/hr]
+
+Special thanks to SmileyChris from whom I shamelessly stole most of the assets used here. https://steamcommunity.com/sharedfiles/filedetails/?id=456856049

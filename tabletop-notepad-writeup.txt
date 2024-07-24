@@ -1,0 +1,77 @@
+[000000][FF0000][b] HANABI (SCRIPTED) [/b]
+----------------------------------
+You can also check the steam workshop page for this mod for more details or to ask questions[-]
+
+
+[800080][b] Features:[/b][-]
+
+  [0000FF]*[-] Scripted setup 
+  [0000FF]*[-] Scripted play/discard hotkeys and areas
+  [0000FF]*[-] Scripted hints appear on hidden player cards
+  [0000FF]*[-] Cards stay hidden until played or discarded 
+  [0000FF]*[-] Turn order represented/manipulated with an interactive turn token
+
+
+[800080][b] Rules: [/b][-]
+
+[b]UltraBoardGames[/b] [0000FF][u]https://www.ultraboardgames.com/hanabi/game-rules.php[/u][-] does a good job explaining the rules of Hanabi. This version allows for a 6-player variant (3 cards each) and some fine-grained control over the rule-set.
+
+  [0000FF]*[-][b]Include rainbow cards:[/b] When you deal a new game, this shuffles rainbow cards into the deck and creates placeholders for them on the board.
+  [0000FF]*[-][b]Rainbow cards are wild:[/b] When you play a rainbow card, you will be given the option to play it as part of any firework. For example, if you play a rainbow two and both the yellow and blue twos are playable, you will be given the choice to play a rainbow in either position.
+    [0000FF]*[-][b]Maximum one wild card per firework:[/b] if (for example) the blue firework has a rainbow 3, then the 4 and 5 must be blue and cannot be rainbow
+  [0000FF]*[-][b]Create a firework out of rainbow cards:[/b] Instead of 5 fireworks, there are now 6. Rainbow cards form the 6th firework.
+  [0000FF]*[-][b]Rainbows cards are every colour when giving hints:[/b] for example, telling a player about their blue cards puts a blue marker on all of their blue [b]and[/b] all of their rainbow cards.
+  [0000FF]*[-][b]Rainbow is a colour (Use rainbow as a hint):[/b] players are given the option of telling another player about all the rainbows in their hand (without this the only way to know which cards in your hands are rainbow is through inference)
+
+[b]An Aside:[/b] Some rules allow players to give hints such as "You have no fives in your hand." Others forbid this. The UI and scripts here make no allowance for such rules, but this doesn't stop players from using them (or any other house rules for that matter).
+
+
+[FF0000][b] ABOUT THIS MOD [/b][-]
+
+
+[800080][b] The User Interface (UI) [/b][-]
+
+One of the main problems with playing Hanabi on Tabletop Simulator is that it’s not easy to point to a card in a player’s hand in a way that’s easy to see from all the different player’s points of view. This mod comes with a user interface that allows players to customise a set of rules as well as give hints that will automatically appear on the backs of players’ cards.
+
+[b]A useful tip:[/b] Other players get a minimal reminder of what a player has been told. This reminder will show at most one color (per card). To see more, players can hold [00FF00]|alt+shift|[-] when hovering over a card to see what hints another player has been given. Alternatively, players can highlight another player’s hand entirely and press [00FF00]|f|[-]
+
+[800080][b] Using the UI [/b][-]
+
+The UI exists primarily on the right side of your screen. If it’s your turn and there are hint tokens face-up, it will display the option to give information to a player. To do so, first select the name of the player you want to give information to. This should display two rows of buttons. 
+
+The first row will display a button for each colour-related hint you can legally give to the selected player. The second row will display a button for each number-related hint you can legally give to the selected player.
+
+Click a button to pass the displayed hint to the selected player.
+
+
+[800080][b] The Turn Token [/b][-]
+
+The script learns whose turn it is by finding the turn token. Often the script will advance the turn token on your behalf. At any time you can manually pick up the turn token and place it infront of a player, this is useful in situations where you have house rules that change turns.
+
+The turn token starts on the square hanabi mat (here called the token mat) alongside the hint tokens, rockets (fuse tokens), and the deck of Hanabi cards. While placed here, you can change the rules that the script will follow. At any time, you can grab the turn token and move it back to the token mat. While not suggested, rules are hot-swappable meaning you can change them mid-game.
+
+[b]A useful tip:[/b] If ever the user interface seems stale (For example, a player is not given the option to talk even though a talk token is available), you can grab the turn-token and drop it again in front of the same player (or any player) and the script will re-compute the UI.
+
+
+[800080][b] Playing or Discarding a Card [/b][-]
+
+Cards played or discarded on the table directly are revealed, but no further action is taken by the script. You can flip hint tokens and remove fuse tokens manually, though you may need to unlock them first (Hover and press [00FF00]|l|[-]). You can start the next player’s turn by moving the turn token manually as well. 
+
+Cards placed in the circular regions labelled “Play” and “Discard” will be played automatically by the script. This will manage fuse and hint tokens according to the set rules. When a rainbow card is played, the player whose turn it is may (if appropriate) be asked to choose where the card is played.
+
+Under [00FF00]|Option > Game Keys|[-] players may set hotkeys to automatically play/discard cards. This moves whichever card is currently under the player’s cursor, to the scripted play/discard area.
+
+[b]A useful tip:[/b] Common hotkey settings are 
+  [0000FF]*[-] comma [00FF00]|,|[-] for play and period [00FF00]|.|[-] for discard
+  [0000FF]*[-] any of the numpad number keys (They're not otherwise used in this mod or by Tabletop Simulator)
+
+
+[800080][b] Chat Settings [/b][-]
+
+The chat keeps a history of game events as they happen. This is helpful if playing without voice-chat or as a quick reminder. Many players find it useful to open the chat settings (via the gear icon at the top left of the chat box) and disable 'Auto Hide Chat'.
+
+
+[FF0000]----------------------------------[-]
+
+Special thanks to [b]SmileyChris[/b] from whom I shamelessly stole many of the assets used here. 
+[0000FF][u]https://steamcommunity.com/sharedfiles/filedetails/?id=456856049[/u][-]

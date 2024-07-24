@@ -1,0 +1,37 @@
+<Defaults>
+    <Text 
+        color="#ffffff"
+        fontSize="200" 
+        alignment="MiddleCenter"
+        outline="#000000"
+    />
+    <Panel 
+        height="1700"
+        width="2300"
+        position="0 0 -100"
+    />
+</Defaults>
+
+<Panel visibility="Red|Yellow|Grey|Black">
+    <Text rotation="0 0 0">
+        <b>PLAY</b>
+    </Text>
+</Panel>
+
+<Panel visibility="Green">
+    <Text rotation="0 0 270">
+        <b>PLAY</b>
+    </Text>
+</Panel>
+
+<Panel visibility="Teal|Blue">
+    <Text rotation="0 0 180">
+        <b>PLAY</b>
+    </Text>
+</Panel>
+
+<Panel visibility="Purple">
+    <Text rotation="0 0 90">
+        <b>PLAY</b>
+    </Text>
+</Panel>

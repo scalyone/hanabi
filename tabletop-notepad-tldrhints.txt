@@ -1,0 +1,14 @@
+[000000][FF0000][b] HANABI (SCRIPTED) [/b]
+----------------------------------
+You can also check the steam workshop page for this mod for more details or to ask questions[-]
+
+----------------------------------
+
+1. The turn token is your friend, if the UI ever seems stale/wrong, jossle the turn token.
+
+2. The Chat box is helpful, hit that gear icon on the upper left corner and set 'Auto Hide Chat' to disabled. Remind freinds, it lets people play better when that's easy to see.
+
+3. I use the hotkeys ([00FF00]|Option > Game Keys|[-]). I recommend the numpad keys, though I use a TKL keyboard, so I use comma [00FF00]|,|[-] for play and period [00FF00]|.|[-] for discard
+
+
+4. You can peek at cards or flip them over to see what information has been given about a card.
